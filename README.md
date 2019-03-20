@@ -19,6 +19,12 @@ Add `https://yourmautic.com/mailer/mailgun/callback` in the mailgun webhook for 
 
 Now your mautic will be able to send through mailgun and track email events such as bounce, failed, unsubscribe, spam according to the webhook you set in mailgun.
 
+### Screenshots
+
+![plugin-screen](./Assets/plugin-screen.png)
+
+![stat](.Assets/stat.png)
+
 ## Author
 
 Muhammad Azamuddin
