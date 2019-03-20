@@ -21,5 +21,8 @@ Now your mautic will be able to send through mailgun and track email events such
 
 ## Author
 
-Muhammad Azamuddin<mas.azamuddin@gmail.com>
+Muhammad Azamuddin
+
+mas.azamuddin@gmail.com
+
 https://arrowfunxtion.com
