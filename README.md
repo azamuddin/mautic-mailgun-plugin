@@ -1,4 +1,4 @@
-# Mailgun plugin for Mautic
+# Mailgun plugin for Mautic (AFMailgun)
 
 ## Installation
 
