@@ -23,7 +23,7 @@ Now your mautic will be able to send through mailgun and track email events such
 
 ![plugin-screen](./Assets/plugin-screen.png)
 
-![stat](.Assets/stat.png)
+![stat](./Assets/stat.png)
 
 ## Author
 
