@@ -19,6 +19,14 @@ Add `https://yourmautic.com/mailer/mailgun/callback` in the mailgun webhook for 
 
 Now your mautic will be able to send through mailgun and track email events such as bounce, failed, unsubscribe, spam according to the webhook you set in mailgun.
 
+### EU Region setup
+
+If you had to select the EU region when creating your Mailgun account, you need to do the following changes:
+
+- edit /Swiftmailer/Transport/MailgunTransport.php
+- replace "smtp.mailgun.org" with "smtp.eu.mailgun.org" (as defined in  mailgun.com/app/sending/domains/{YOUR_DOMAIN}/credentials )
+- when using the API, replace "api.mailgun.net" with "api.eu.mailgun.net"
+
 ### Screenshots
 
 ![plugin-screen](./Assets/plugin-screen.png)
