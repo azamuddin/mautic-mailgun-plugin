@@ -18,7 +18,6 @@ return [
                 'arguments' => [
                     'mautic.email.model.transport_callback',
                     '%mautic.mailer_host%',
-                    '%mautic.mailer_port%',
                     '%mautic.mailer_user%',
                     '%mautic.mailer_password%',
                     '%mautic.mailer_mailgun_sandbox%',
