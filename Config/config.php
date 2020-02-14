@@ -14,17 +14,24 @@ return [
     'services' => [
         'other' => [
             'mautic.transport.mailgun' => [
-                'class' => 'MauticPlugin\AFMailgunBundle\Swiftmailer\Transport\MailgunTransport',
-                'serviceAlias' => 'swiftmailer.mailer.transport.%s',
+                'class' => \MauticPlugin\AFMailgunBundle\Swiftmailer\Transport\MailgunTransport::class,
                 'arguments' => [
                     'mautic.email.model.transport_callback',
+                    '%mautic.mailer_host%',
+                    '%mautic.mailer_port%',
+                    '%mautic.mailer_user%',
+                    '%mautic.mailer_password%',
                     '%mautic.mailer_mailgun_sandbox%',
                     '%mautic.mailer_mailgun_sandbox_default_mail%',
                 ],
-                'methodCalls' => [
-                    'setUsername' => ['%mautic.mailer_user%'],
-                    'setPassword' => ['%mautic.mailer_password%'],
+                'tagArguments' => [
+                    \Mautic\EmailBundle\Model\TransportType::TRANSPORT_ALIAS => 'mautic.email.config.mailer_transport.mailgun',
+                    \Mautic\EmailBundle\Model\TransportType::FIELD_HOST   => true,
+                    \Mautic\EmailBundle\Model\TransportType::FIELD_USER      => true,
+                    \Mautic\EmailBundle\Model\TransportType::FIELD_PASSWORD      => true,
                 ],
+                'tag'          => 'mautic.email_transport',
+                'serviceAlias' => 'swiftmailer.mailer.transport.%s',
             ],
         ],
     ],
