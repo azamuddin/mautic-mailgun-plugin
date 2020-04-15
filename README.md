@@ -10,22 +10,25 @@
 ## Usage
 
 - Choose Mailgun as the mail service, in mautic mail configuration > Email Settings.
-- Enter your username e.g postmaster@mg.yourmailgundomain.com and the password (you can get these information on mailgun dashboard)
-- Save / Apply
+
+Enter yours:
+- host: smtp.mailgun.org (non EU) or smtp.eu.mailgun.org (EU)
+- username e.g postmaster@mg.yourmailgundomain.com 
+- the password (you can get these information on mailgun dashboard)
+
+![image](https://user-images.githubusercontent.com/462477/74548255-cdad8a80-4f4d-11ea-8597-90d3745e9a84.png)
 
 ### Add webhook URL to mailgun
 
-Add `https://yourmautic.com/mailer/mailgun/callback` in the mailgun webhook for your selected events.
+Add `https://yourmautic.com/mailer/mailgun/callback` in the mailgun webhook for your selected events:
+- permanent failure
+- spam complaints
+- temporary failure
+- unsubscribes
+
+![image](https://user-images.githubusercontent.com/462477/74548580-67753780-4f4e-11ea-8306-6f10fc93353f.png)
 
 Now your mautic will be able to send through mailgun and track email events such as bounce, failed, unsubscribe, spam according to the webhook you set in mailgun.
-
-### EU Region setup
-
-If you had to select the EU region when creating your Mailgun account, you need to do the following changes:
-
-- edit /Swiftmailer/Transport/MailgunTransport.php
-- replace "smtp.mailgun.org" with "smtp.eu.mailgun.org" (as defined in  mailgun.com/app/sending/domains/{YOUR_DOMAIN}/credentials )
-- when using the API, replace "api.mailgun.net" with "api.eu.mailgun.net"
 
 ### Screenshots
 
