@@ -3,6 +3,7 @@
 ## Installation
 
 - upload the contents in this repo to mautic instalation `plugins/AFMailgunBundle`
+- *Important*: the name of the plugin directory MUST be `AFMailgunBundle`
 - remove cache `sudo rm -rf app/cache/*`
 - go to mautic settings > plugins > click `Install / Upgrade Plugin`
 - done.
